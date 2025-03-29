@@ -1436,7 +1436,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2159310261947464292, guid: bc6937a2b57f0e64684a15f05f97ff56, type: 3}
 --- !u!1001 &159571777
@@ -4356,6 +4356,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 942762337184432749, guid: b9c7a183a7a2e004cb24435cb080a708, type: 3}
   m_PrefabInstance: {fileID: 624129544}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &629751219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 629751220}
+  m_Layer: 0
+  m_Name: Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &629751220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629751219}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0589, y: -0.009300232, z: -0.0413208}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1067750600}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &631719816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6795833471293109181, guid: 4c4896384163f7c428f38c4741487cdb, type: 3}
@@ -5033,7 +5064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760848144}
   m_Layer: 0
-  m_Name: Attach
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5162,7 +5193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791617306}
   m_Layer: 0
-  m_Name: Lager
+  m_Name: Camp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5255,6 +5286,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 942762337184432749, guid: b9c7a183a7a2e004cb24435cb080a708, type: 3}
   m_PrefabInstance: {fileID: 799432702}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &818203264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 818203265}
+  m_Layer: 0
+  m_Name: Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &818203265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818203264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -0.0955, y: -0.009, z: 0.0245}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1386326960}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5923,7 +5985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988667286}
   m_Layer: 0
-  m_Name: Attach
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6566,6 +6628,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 634847978797679512, guid: 55b1fd5f577255c4a8338b61385780ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 760848144}
+    - targetCorrespondingSourceObject: {fileID: 634847978797679512, guid: 55b1fd5f577255c4a8338b61385780ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 629751220}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6949219968297497114, guid: 55b1fd5f577255c4a8338b61385780ec, type: 3}
       insertIndex: -1
@@ -6655,7 +6720,7 @@ MonoBehaviour:
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
   m_AttachTransform: {fileID: 760848144}
-  m_SecondaryAttachTransform: {fileID: 760848144}
+  m_SecondaryAttachTransform: {fileID: 629751220}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
@@ -9294,6 +9359,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1508531609862238574, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 988667286}
+    - targetCorrespondingSourceObject: {fileID: 1508531609862238574, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 818203265}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2280142118875376596, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
       insertIndex: -1
