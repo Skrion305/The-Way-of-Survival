@@ -1,0 +1,20 @@
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.UI;
+
+public class UI : MonoBehaviour
+{
+    public GameObject canvas;
+    public void InHand(SelectEnterEventArgs args)
+    {
+        canvas.SetActive(true);
+    }
+    public void NotInHand(SelectExitEventArgs args)
+    {
+        canvas.SetActive(false);
+    }
+    public void Close()
+    {
+        canvas.SetActive(false);
+    }
+}
