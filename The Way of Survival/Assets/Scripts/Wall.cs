@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    public GameObject panel;
+    [SerializeField] GameObject panel;
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag("Wall"))
         {
-            panel.SetActive(true);
+            panel.SetActive(true); //Vector3(-0.902008057,0.977999926,6.24700928)
         }
     }
 }
