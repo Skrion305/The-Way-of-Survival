@@ -7,16 +7,14 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Da");
-            door.transform.rotation = Quaternion.Lerp(door.transform.rotation, Quaternion.Euler(0, -90f, 0), 2 * Time.deltaTime);
+            door.transform.Rotate(0, -90, 0);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Net");
-            door.transform.rotation = Quaternion.Lerp(door.transform.rotation, Quaternion.Euler(0, 90f, 0), 2 * Time.deltaTime);
+            door.transform.Rotate(0, 90, 0);
         }
     }
 }
