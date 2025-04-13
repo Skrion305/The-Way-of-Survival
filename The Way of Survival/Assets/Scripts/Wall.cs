@@ -7,7 +7,7 @@ public class Wall : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Wall"))
         {
-            panel.SetActive(true); //Vector3(-0.902008057,0.977999926,6.24700928)
+            panel.SetActive(true);
         }
     }
 }
