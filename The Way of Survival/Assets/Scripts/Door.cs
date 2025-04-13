@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] GameObject door;
-    private void OnTriggerEnter(Collider other)
+    Animator anim;
+    void Start()
     {
-        if (other.CompareTag("Player"))
-        {
-            door.transform.Rotate(0, -90, 0);
-        }
+        anim = GetComponent<Animator>();
     }
-    private void OnTriggerExit(Collider other)
+    public void Open()
     {
-        if (other.CompareTag("Player"))
-        {
-            door.transform.Rotate(0, 90, 0);
-        }
+        anim.SetBool("Open", true);
+    }
+    public void Close()
+    {
+        anim.SetBool("Open", false);
     }
 }
