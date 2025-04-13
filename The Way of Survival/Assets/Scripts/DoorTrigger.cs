@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    Door door;
+    public Door door;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
