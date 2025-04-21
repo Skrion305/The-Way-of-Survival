@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6404950297370080527
+--- !u!1001 &6561977838209246168
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 419b474d3d31ef54e9c101d6e7213aee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 152.88809
+      value: 168.92436
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 419b474d3d31ef54e9c101d6e7213aee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 110.87402
+      value: 109.287
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 419b474d3d31ef54e9c101d6e7213aee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -966.90344
+      value: -932.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 419b474d3d31ef54e9c101d6e7213aee, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 419b474d3d31ef54e9c101d6e7213aee, type: 3}
       propertyPath: m_Name
-      value: URP_Tree_1_LOD_0
+      value: Tree
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58,20 +58,20 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 419b474d3d31ef54e9c101d6e7213aee, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2555860664986506917}
+      addedObject: {fileID: 7832303648067538599}
   m_SourcePrefab: {fileID: 100100000, guid: 419b474d3d31ef54e9c101d6e7213aee, type: 3}
---- !u!1 &6062862755152234590 stripped
+--- !u!1 &6328047593737657993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 419b474d3d31ef54e9c101d6e7213aee, type: 3}
-  m_PrefabInstance: {fileID: 6404950297370080527}
+  m_PrefabInstance: {fileID: 6561977838209246168}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &2555860664986506917
+--- !u!136 &7832303648067538599
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6062862755152234590}
+  m_GameObject: {fileID: 6328047593737657993}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -84,7 +84,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.33921456
-  m_Height: 2.2730865
+  m_Radius: 0.3
+  m_Height: 2.2402878
   m_Direction: 1
-  m_Center: {x: 0.079738855, y: 1.1998825, z: 0}
+  m_Center: {x: 0, y: 0.82453537, z: 0}
