@@ -2959,6 +2959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Device Simulator
       objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5479,7 +5483,7 @@ AudioSource:
   m_Volume: 0.077
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -6185,15 +6189,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3185574001129481042, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.17
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 3185574001129481042, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.17
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 3185574001129481042, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.17
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 3185574001129481042, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6267,6 +6271,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2129711333787706182, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1922723365}
+    - targetCorrespondingSourceObject: {fileID: 2129711333787706182, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1922723368}
     - targetCorrespondingSourceObject: {fileID: 3862520920621010117, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1953914351}
@@ -6928,7 +6935,7 @@ Transform:
   m_GameObject: {fileID: 943595137}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.26, y: 0.23, z: 2.13}
+  m_LocalPosition: {x: -0.26, y: 0.23, z: 1.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7921,7 +7928,7 @@ AudioSource:
   m_Volume: 0.209
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -8751,7 +8758,7 @@ Transform:
   m_GameObject: {fileID: 1111794130}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.321, y: -0.27, z: -1.97}
+  m_LocalPosition: {x: 0.321, y: -0.27, z: -1.776}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14317,7 +14324,7 @@ Transform:
   m_GameObject: {fileID: 1665451495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 176.412, y: 111.689, z: -965.848}
+  m_LocalPosition: {x: 176.361, y: 111.611, z: -965.848}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16897,10 +16904,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1922723368}
+        m_TargetAssemblyTypeName: Grab_Parenter, Assembly-CSharp
+        m_MethodName: OnGrab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1922723368}
+        m_TargetAssemblyTypeName: Grab_Parenter, Assembly-CSharp
+        m_MethodName: OnUngrab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -16922,8 +16953,8 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 943595138}
-  m_SecondaryAttachTransform: {fileID: 1111794131}
+  m_AttachTransform: {fileID: 1111794131}
+  m_SecondaryAttachTransform: {fileID: 943595138}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
@@ -17004,6 +17035,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3185574001129481042, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
   m_PrefabInstance: {fileID: 784408194}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1922723368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922723363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be520149facb6a34eaebf94a0a0d9e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1929649019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19079,7 +19122,7 @@ AudioSource:
   m_Volume: 0.261
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
