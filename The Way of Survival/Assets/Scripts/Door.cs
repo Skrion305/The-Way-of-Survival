@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] GameObject door;
-    private void OnTriggerEnter(Collider other)
+    Animator anim;
+    void Start()
     {
-        if (other.CompareTag("Door"))
-        {
-            door.transform.rotation = Quaternion.Euler(0f, -10.31f, 0f);
-        }
+        anim = GetComponent<Animator>();
     }
-    private void OnTriggerExit(Collider other)
+    public void Open()
     {
-        if (other.CompareTag("Door"))
-        {
-            door.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
-        }
+        anim.SetBool("Open", true);
+    }
+    public void Close()
+    {
+        anim.SetBool("Open", false);
     }
 }
