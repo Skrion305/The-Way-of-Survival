@@ -2855,7 +2855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4096,6 +4096,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &477790117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477790115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84337a9fc28466c4c80ca97210600773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &481005633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3043673e666d4c0458e7fc721d29830e, type: 3}
@@ -12950,7 +12962,6 @@ GameObject:
   - component: {fileID: 1591610781}
   - component: {fileID: 1591610780}
   - component: {fileID: 1591610785}
-  - component: {fileID: 1591610784}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Door
@@ -13047,18 +13058,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1591610784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591610779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84337a9fc28466c4c80ca97210600773, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1591610785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13071,7 +13070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b1024e70ebb034c8b5f429ad4aaa1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 1591610784}
+  door: {fileID: 477790117}
 --- !u!1 &1596475459
 GameObject:
   m_ObjectHideFlags: 0
@@ -15489,6 +15488,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8442262470655759374, guid: 0b26cd811d173394ea7ee69051b77c63, type: 3}
       insertIndex: -1
       addedObject: {fileID: 477790116}
+    - targetCorrespondingSourceObject: {fileID: 8442262470655759374, guid: 0b26cd811d173394ea7ee69051b77c63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 477790117}
   m_SourcePrefab: {fileID: 100100000, guid: 0b26cd811d173394ea7ee69051b77c63, type: 3}
 --- !u!1001 &1872383118
 PrefabInstance:
