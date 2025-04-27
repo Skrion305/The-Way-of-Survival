@@ -850,14 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b01170520439248a800fdf5298d90d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  hunger: 100
-  food: 0
-  medChests: 0
-  ammun: 0
-  collec: 0
-  reqResources: 0
-  countRes: {fileID: 1228997746}
+  resources: 0
 --- !u!1001 &87521158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6274,6 +6267,7 @@ GameObject:
   - component: {fileID: 781851889}
   - component: {fileID: 781851888}
   - component: {fileID: 781851887}
+  - component: {fileID: 781851890}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -6370,6 +6364,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781851885}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &781851890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781851885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92486479af0d1044385a4ae9786bf4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1228997746}
+  player: {fileID: 86266106}
+  wall: {fileID: 33618390}
+  panel: {fileID: 1146527608}
 --- !u!1001 &784408194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9883,7 +9893,7 @@ GameObject:
   - component: {fileID: 1146527611}
   - component: {fileID: 1146527610}
   m_Layer: 5
-  m_Name: Indicators
+  m_Name: Mission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
