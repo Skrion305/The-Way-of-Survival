@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Wall
+  - Weapon
+  - Infected
   layers:
   - Default
   - TransparentFX
