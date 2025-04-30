@@ -4808,6 +4808,7 @@ Transform:
   - {fileID: 322767445}
   - {fileID: 2136457434}
   - {fileID: 1917707363}
+  - {fileID: 904700172}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &614710952
@@ -7680,10 +7681,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.013370742, y: 0.00017175451, z: -0.012843341, w: 0.99982816}
   m_LocalPosition: {x: 256.21, y: 75.611, z: -553.538}
-  m_LocalScale: {x: 2.7793775, y: 0.0154, z: 2.9425473}
+  m_LocalScale: {x: 2.7793775, y: 0.015400001, z: 2.9425476}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 613067752}
   m_LocalEulerAnglesHint: {x: 1.532, y: 0, z: -1.472}
 --- !u!114 &904700173
 MonoBehaviour:
@@ -14690,7 +14691,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -14778,6 +14779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1019444871}
+  losing: {fileID: 1336976565}
 --- !u!65 &1665451504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19436,4 +19438,3 @@ SceneRoots:
   - {fileID: 105367501}
   - {fileID: 730456669}
   - {fileID: 1425476333}
-  - {fileID: 904700172}

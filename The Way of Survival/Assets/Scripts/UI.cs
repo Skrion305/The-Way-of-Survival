@@ -3,10 +3,18 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class UI : MonoBehaviour
 {
-    public GameObject panel;
+    [SerializeField] GameObject panel;
+    [SerializeField] GameObject losing;
     public void InHand(SelectEnterEventArgs args)
     {
-        panel.SetActive(true);
+        if (args.interactableObject.transform.CompareTag("Infected"))
+        {
+            losing.SetActive(true);
+        }
+        else if (args.interactableObject.transform.CompareTag("Weapon"))
+        {
+            panel.SetActive(true);
+        }
     }
     public void NotInHand(SelectExitEventArgs args)
     {
