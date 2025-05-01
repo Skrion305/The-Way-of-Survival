@@ -38,4 +38,8 @@ public class EnemyStateManager : MonoBehaviour
     {
         target = newDestination;
     }
+    public float Distance()
+    {
+        return (transform.position - target.position).magnitude;
+    }
 }
