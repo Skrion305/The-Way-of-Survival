@@ -4,17 +4,21 @@ public class IdleState : BaseState
 {
     public override void EnterState(EnemyStateManager manager)
     {
-        manager.SetSpeed(0);
-    }
-    public override void ExitState(EnemyStateManager manager)
-    {
-
+        manager.SetSpeed(manager.idleSpeed);
     }
     public override void UpdateState(EnemyStateManager manager)
     {
-        if (manager.Distance() < 25)
+        if (manager.Waiting())
         {
+            manager.wait = 0f;
+            manager.SwitchState(manager.search);
+            return;
+        }
+        if (manager.Distance(manager.player) < manager.chaseDistance)
+        {
+            manager.wait = 0f;
             manager.SwitchState(manager.chase);
+            return;
         }
     }
 }
