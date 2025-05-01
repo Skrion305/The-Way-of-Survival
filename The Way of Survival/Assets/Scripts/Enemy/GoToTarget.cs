@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GoToTarget : MonoBehaviour
 {
-    [SerializeField] UnityEngine.AI.NavMeshAgent nma;
+    [SerializeField] NavMeshAgent nma;
     [SerializeField] Transform player;
     void Update()
     {
