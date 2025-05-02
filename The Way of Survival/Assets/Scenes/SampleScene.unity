@@ -832,7 +832,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86266084}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3b01170520439248a800fdf5298d90d, type: 3}
   m_Name: 
@@ -2908,7 +2908,6 @@ GameObject:
   - component: {fileID: 419956074}
   - component: {fileID: 419956073}
   - component: {fileID: 419956072}
-  - component: {fileID: 419956071}
   m_Layer: 0
   m_Name: Point (1)
   m_TagString: Untagged
@@ -2916,27 +2915,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &419956071
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419956070}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &419956072
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3882,7 +3860,6 @@ GameObject:
   - component: {fileID: 498431775}
   - component: {fileID: 498431774}
   - component: {fileID: 498431778}
-  - component: {fileID: 498431779}
   - component: {fileID: 498431780}
   - component: {fileID: 498431781}
   m_Layer: 0
@@ -4005,20 +3982,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &498431779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498431773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4c1e52f50b31c4b9e00e4c5e61fa5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nma: {fileID: 498431778}
-  player: {fileID: 86266107}
 --- !u!54 &498431780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4064,10 +4027,11 @@ MonoBehaviour:
   point2: {fileID: 419956074}
   idleSpeed: 0
   searchSpeed: 2
+  searchDistance: 2
   wait: 0
-  chaseDistance: 20
+  chaseDistance: 25
   chaseSpeed: 4
-  attackDistance: 2
+  attackDistance: 3
   attackSpeed: 0
 --- !u!1001 &504224895
 PrefabInstance:
@@ -6080,7 +6044,6 @@ GameObject:
   - component: {fileID: 726912127}
   - component: {fileID: 726912126}
   - component: {fileID: 726912125}
-  - component: {fileID: 726912124}
   m_Layer: 0
   m_Name: Point
   m_TagString: Untagged
@@ -6088,27 +6051,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &726912124
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726912123}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &726912125
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13084,7 +13026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1434879271
 MonoBehaviour:
   m_ObjectHideFlags: 0

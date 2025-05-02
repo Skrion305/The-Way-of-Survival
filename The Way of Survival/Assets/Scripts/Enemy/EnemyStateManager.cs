@@ -9,6 +9,7 @@ public class EnemyStateManager : MonoBehaviour
     public Transform point2;
     public float idleSpeed;
     public float searchSpeed;
+    public float searchDistance;
     public float wait;
     public float chaseDistance;
     public float chaseSpeed;

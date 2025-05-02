@@ -15,7 +15,7 @@ public class SearchState : BaseState
             manager.SwitchState(manager.chase);
             return;
         }
-        if (manager.Distance(manager.point1) == 0f)
+        if (manager.Distance(manager.point1) < manager.searchDistance)
         {
             if (manager.Waiting())
             {
@@ -23,7 +23,7 @@ public class SearchState : BaseState
                 manager.SetDestination(manager.point2);
             }
         }
-        if (manager.Distance(manager.point2) == 0f)
+        if (manager.Distance(manager.point2) < manager.searchDistance)
         {
             if (manager.Waiting())
             {
