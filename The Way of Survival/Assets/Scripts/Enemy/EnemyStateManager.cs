@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class EnemyStateManager : MonoBehaviour
 {
     [SerializeField] NavMeshAgent nma;
+    [SerializeField] Collider damageCollider;
+    [SerializeField] public Animator animator;
     public Transform player;
     public Transform point1;
     public Transform point2;
@@ -53,5 +56,27 @@ public class EnemyStateManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+    void CheckConditions()
+    {
+        if (state == attack)
+        {
+            if (Distance(player) >= attackDistance)
+            {
+                SwitchState(chase);
+                return;
+            }
+        }
+    }
+    void OnofDamager(int isoff)
+    {
+        if(isoff == 0)
+        {
+            damageCollider.enabled = false;
+        }
+        else
+        {
+            damageCollider.enabled = true;
+        }
     }
 }
