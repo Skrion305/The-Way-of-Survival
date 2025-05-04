@@ -1,13 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class Menu : MonoBehaviour
 {
     [SerializeField] GameObject panel1;
     [SerializeField] GameObject panel2;
-    void Update()
+    [SerializeField] Slider slider;
+    [SerializeField] TMP_Text text;
+    [SerializeField] AudioSource audioSource;
+    void Start()
     {
         AudioListener.volume = Settings.volumeLevel;
+        slider.value = Settings.volumeLevel;
     }
     public void StartGame()
     {
@@ -21,6 +27,22 @@ public class Menu : MonoBehaviour
     public void Volume(float value)
     {
         Settings.volumeLevel = value;
+        AudioListener.volume = value;
+    }
+    public void Music()
+    {
+        if (audioSource.volume == 1f)
+        {
+            audioSource.volume = 0f;
+            text.text = "Включить";
+            Settings.music = false;
+        }
+        else
+        {
+            audioSource.volume = 1f;
+            text.text = "Выключить";
+            Settings.music = true;
+        }
     }
     public void Back()
     {
