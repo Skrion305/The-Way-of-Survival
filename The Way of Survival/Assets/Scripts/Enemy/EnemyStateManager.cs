@@ -23,6 +23,8 @@ public class EnemyStateManager : MonoBehaviour
     public SearchState search = new SearchState();
     public ChaseState chase = new ChaseState();
     public AttackState attack = new AttackState();
+
+    [SerializeField] public AudioSource sound_attack1, sound_chase1;
     void Start()
     {
         SwitchState(idle);
@@ -30,6 +32,7 @@ public class EnemyStateManager : MonoBehaviour
     void Update()
     {
         state.UpdateState(this);
+        
     }
     public void SwitchState(BaseState newState)
     {
