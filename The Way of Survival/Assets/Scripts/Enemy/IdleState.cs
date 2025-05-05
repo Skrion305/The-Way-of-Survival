@@ -5,8 +5,8 @@ public class IdleState : BaseState
     public override void EnterState(EnemyStateManager manager)
     {
         manager.SetSpeed(manager.idleSpeed);
-        manager.animator.SetBool("isagro",false);
-        manager.animator.SetBool("isattack",false);
+        manager.animator.SetBool("isagro", false);
+        manager.animator.SetBool("isattack", false);
     }
     public override void UpdateState(EnemyStateManager manager)
     {

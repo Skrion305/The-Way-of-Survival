@@ -6,7 +6,7 @@ public class EnemyStateManager : MonoBehaviour
 {
     [SerializeField] NavMeshAgent nma;
     [SerializeField] Collider damageCollider;
-    [SerializeField] public Animator animator;
+    public Animator animator;
     public Transform player;
     public Transform point1;
     public Transform point2;
@@ -32,7 +32,6 @@ public class EnemyStateManager : MonoBehaviour
     void Update()
     {
         state.UpdateState(this);
-        
     }
     public void SwitchState(BaseState newState)
     {
