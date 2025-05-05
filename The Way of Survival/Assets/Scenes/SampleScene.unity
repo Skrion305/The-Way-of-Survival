@@ -4031,7 +4031,7 @@ MonoBehaviour:
   wait: 0
   chaseDistance: 25
   chaseSpeed: 4
-  attackDistance: 3
+  attackDistance: 2.5
   attackSpeed: 0
 --- !u!1001 &504224895
 PrefabInstance:
