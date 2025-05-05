@@ -13,6 +13,7 @@ public class EnemyStateManager : MonoBehaviour
     public float idleSpeed;
     public float searchSpeed;
     public float searchDistance;
+    public int point;
     public float wait;
     public float chaseDistance;
     public float chaseSpeed;
