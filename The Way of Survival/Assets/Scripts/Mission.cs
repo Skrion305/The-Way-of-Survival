@@ -8,6 +8,7 @@ public class Mission : MonoBehaviour
     int res = 0;
     [SerializeField] GameObject wall;
     [SerializeField] GameObject panel;
+    [SerializeField] GameObject indic;
     void Start()
     {
         text.text = "Собрано ресурсов: " + resources.ToString() + "/5";
@@ -18,6 +19,7 @@ public class Mission : MonoBehaviour
         {
             panel.SetActive(false);
             Destroy(wall);
+            indic.SetActive(true);
         }
         else if (resources > res)
         {

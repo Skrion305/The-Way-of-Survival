@@ -5,14 +5,16 @@ public class Damagedetector : MonoBehaviour
 {
     int health = 100;
     [SerializeField] TMP_Text text;
-    [SerializeField] GameObject panel;
+    [SerializeField] GameObject losing;
+    [SerializeField] GameObject indic;
     public void ondamagedetected(int damage)
     {
         health -= damage;
         text.text = "Health: " + health.ToString();
         if (health <= 0)
         {
-            panel.SetActive(true);
+            indic.SetActive(false);
+            losing.SetActive(true);
         }
     }
 }
