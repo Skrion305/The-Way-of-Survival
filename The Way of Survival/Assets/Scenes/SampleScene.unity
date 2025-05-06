@@ -1848,7 +1848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4901,8 +4901,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255615
-  m_fontColor: {r: 1, g: 1, b: 0, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7389,6 +7389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: uzi
       objectReference: {fileID: 0}
+    - target: {fileID: 5327882598204668513, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5615569750808973756, guid: b20f3e7aee9728e438b1f108956cbb5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 174.268
@@ -7854,7 +7858,7 @@ Transform:
   m_GameObject: {fileID: 818203264}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 225.6, y: 89.67, z: -676.37}
+  m_LocalPosition: {x: -0.1002, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9398,7 +9402,7 @@ Transform:
   m_GameObject: {fileID: 988667285}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 225.6, y: 89.67, z: -676.37}
+  m_LocalPosition: {x: -0.1002, y: -0.0016, z: -0.0215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12691,7 +12695,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1377501544}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1665451503}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1377501544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12839,6 +12855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2K_Knife_Wood
       objectReference: {fileID: 0}
+    - target: {fileID: 2280142118875376596, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4555104618595932016, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 225.6
@@ -12852,7 +12872,8 @@ PrefabInstance:
       value: -676.37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4555104618595731388, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1508531609862238574, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
       insertIndex: -1
@@ -12870,6 +12891,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2280142118875376596, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1386326966}
+    - targetCorrespondingSourceObject: {fileID: 2280142118875376596, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386326967}
   m_SourcePrefab: {fileID: 100100000, guid: 092ab3257eff60b41bf654967fca85f9, type: 3}
 --- !u!1 &1386326959 stripped
 GameObject:
@@ -13068,6 +13092,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be520149facb6a34eaebf94a0a0d9e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1386326967
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386326959}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.34817228, y: 0.058453992, z: 0.01947152}
+  m_Center: {x: 0.00058728456, y: 0, z: 0}
 --- !u!1001 &1388544350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15902,6 +15947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 1693887106}
   losing: {fileID: 753243499}
+  m: {fileID: 713666067}
+  indic: {fileID: 948262128}
+  mission: {fileID: 781851890}
 --- !u!65 &1665451504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16150,8 +16198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.3, y: 8}
-  m_SizeDelta: {x: 27.94, y: 12}
+  m_AnchoredPosition: {x: -9.5, y: 8}
+  m_SizeDelta: {x: 53.54, y: 11.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681405349
 MonoBehaviour:
@@ -16173,7 +16221,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u0412\u044B \u043F\u043E\u0434\u043E\u0431\u0440\u0430\u043B\u0438 \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442\n\u0423\u0440\u043E\u043D:
+    10"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01db1b340911e7c46981fdb675c2f884, type: 2}
   m_sharedMaterial: {fileID: -3146675918812629673, guid: 01db1b340911e7c46981fdb675c2f884, type: 2}
