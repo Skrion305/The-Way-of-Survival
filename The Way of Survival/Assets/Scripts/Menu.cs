@@ -14,6 +14,16 @@ public class Menu : MonoBehaviour
     {
         AudioListener.volume = Settings.volumeLevel;
         slider.value = Settings.volumeLevel;
+        if (Settings.music)
+        {
+            audioSource.volume = 1f;
+            text.text = "Выключить";
+        }
+        else
+        {
+            audioSource.volume = 0f;
+            text.text = "Включить";
+        }
     }
     public void StartGame()
     {
@@ -31,7 +41,7 @@ public class Menu : MonoBehaviour
     }
     public void Music()
     {
-        if (audioSource.volume == 1f)
+        if (Settings.music)
         {
             audioSource.volume = 0f;
             text.text = "Включить";
