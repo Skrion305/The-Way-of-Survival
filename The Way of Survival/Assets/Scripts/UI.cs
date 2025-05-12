@@ -8,6 +8,7 @@ public class UI : MonoBehaviour
     [SerializeField] GameObject m;
     [SerializeField] GameObject indic;
     bool ui = false;
+    bool lose = false;
     public Mission mission;
     public void InHand(SelectEnterEventArgs args)
     {
@@ -15,12 +16,14 @@ public class UI : MonoBehaviour
         {
             losing.SetActive(true);
             indic.SetActive(false);
+            lose = true;
         }
         else if ((!ui) && (args.interactableObject.transform.CompareTag("Weapon")))
         {
             panel.SetActive(true);
             ui = true;
             m.SetActive(false);
+            indic.SetActive(false);
         }
     }
     public void NotInHand(SelectExitEventArgs args)
@@ -33,6 +36,10 @@ public class UI : MonoBehaviour
         if (mission.resources < 5)
         {
             m.SetActive(true);
+        }
+        else if (!lose)
+        {
+            indic.SetActive(true);
         }
     }
 }
