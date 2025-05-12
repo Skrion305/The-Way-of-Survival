@@ -7241,7 +7241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 568004997}
-  resources: 0
+  resources: 5
   wall: {fileID: 33618390}
   panel: {fileID: 713666067}
   indic: {fileID: 948262128}

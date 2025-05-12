@@ -11,6 +11,7 @@ public class AttackState : BaseState
     public override void UpdateState(EnemyStateManager manager)
     {
         manager.sound_attack1.Play();
+        manager.transform.LookAt(manager.player);
     }
     /*    if (manager.Distance(manager.player) >= manager.attackDistance)
     //    {
