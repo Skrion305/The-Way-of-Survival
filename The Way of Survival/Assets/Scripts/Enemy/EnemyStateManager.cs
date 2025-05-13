@@ -1,15 +1,19 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class EnemyStateManager : MonoBehaviour
 {
     [SerializeField] NavMeshAgent nma;
+    [SerializeField] Collider damageCollider;
+    public Animator animator;
     public Transform player;
     public Transform point1;
     public Transform point2;
     public float idleSpeed;
     public float searchSpeed;
     public float searchDistance;
+    public int point;
     public float wait;
     public float chaseDistance;
     public float chaseSpeed;
@@ -20,6 +24,8 @@ public class EnemyStateManager : MonoBehaviour
     public SearchState search = new SearchState();
     public ChaseState chase = new ChaseState();
     public AttackState attack = new AttackState();
+
+    [SerializeField] public AudioSource sound_attack1, sound_chase1;
     void Start()
     {
         SwitchState(idle);
@@ -53,5 +59,27 @@ public class EnemyStateManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+    void CheckConditions()
+    {
+        if (state == attack)
+        {
+            if (Distance(player) >= attackDistance)
+            {
+                SwitchState(chase);
+                return;
+            }
+        }
+    }
+    void OnofDamager(int isoff)
+    {
+        if(isoff == 0)
+        {
+            damageCollider.enabled = false;
+        }
+        else
+        {
+            damageCollider.enabled = true;
+        }
     }
 }

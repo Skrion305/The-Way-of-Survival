@@ -8,6 +8,8 @@ TagManager:
   - Weapon
   - Infected
   - Enemy
+  - Left
+  - Right
   layers:
   - Default
   - TransparentFX

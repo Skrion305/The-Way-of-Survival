@@ -5,6 +5,9 @@ public class ChaseState : BaseState
     public override void EnterState(EnemyStateManager manager)
     {
         manager.SetSpeed(manager.chaseSpeed);
+        manager.animator.SetBool("isagro", true);
+        manager.animator.SetBool("isattack", false);
+        manager.sound_chase1.Play();
     }
     public override void UpdateState(EnemyStateManager manager)
     {

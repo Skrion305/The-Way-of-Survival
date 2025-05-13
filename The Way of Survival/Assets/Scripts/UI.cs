@@ -5,27 +5,41 @@ public class UI : MonoBehaviour
 {
     [SerializeField] GameObject panel;
     [SerializeField] GameObject losing;
-    [SerializeField] GameObject mission;
+    [SerializeField] GameObject m;
+    [SerializeField] GameObject indic;
+    bool ui = false;
+    bool lose = false;
+    public Mission mission;
     public void InHand(SelectEnterEventArgs args)
     {
         if (args.interactableObject.transform.CompareTag("Infected"))
         {
             losing.SetActive(true);
+            indic.SetActive(false);
+            lose = true;
         }
-        else if (args.interactableObject.transform.CompareTag("Weapon"))
+        else if ((!ui) && (args.interactableObject.transform.CompareTag("Weapon")))
         {
             panel.SetActive(true);
-            mission.SetActive(false);
+            ui = true;
+            m.SetActive(false);
+            indic.SetActive(false);
         }
     }
     public void NotInHand(SelectExitEventArgs args)
     {
-        panel.SetActive(false);
-        mission.SetActive(true);
+        Close();
     }
     public void Close()
     {
         panel.SetActive(false);
-        mission.SetActive(true);
+        if (mission.resources < 5)
+        {
+            m.SetActive(true);
+        }
+        else if (!lose)
+        {
+            indic.SetActive(true);
+        }
     }
 }
