@@ -1,0 +1,11 @@
+Model Information:
+* title:	Vintage record player
+* source:	https://sketchfab.com/3d-models/vintage-record-player-6f3b6984c2f74d64b08833b5f61c2253
+* author:	JennyB (https://sketchfab.com/jenny77)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Vintage record player" (https://sketchfab.com/3d-models/vintage-record-player-6f3b6984c2f74d64b08833b5f61c2253) by JennyB (https://sketchfab.com/jenny77) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

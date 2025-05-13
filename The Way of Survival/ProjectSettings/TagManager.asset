@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Wall
-  - Door
+  - Weapon
+  - Infected
+  - Enemy
+  - Left
+  - Right
   layers:
   - Default
   - TransparentFX
@@ -13,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Walkable
   - 
   - 
   - 
