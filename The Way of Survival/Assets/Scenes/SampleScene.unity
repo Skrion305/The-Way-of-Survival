@@ -1019,8 +1019,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8.86, y: 4.79, z: 5.81}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.8929749, y: 3.421997, z: 1.7009888}
+  m_Center: {x: -0.11564636, y: 0.5526123, z: -0.24142456}
 --- !u!1001 &87521158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3978,6 +3978,7 @@ MonoBehaviour:
   chaseSpeed: 4
   attackDistance: 3
   attackSpeed: 2
+  issdead: 0
   sound_attack1: {fileID: 0}
   sound_chase1: {fileID: 0}
 --- !u!1001 &504224895
@@ -5052,8 +5053,9 @@ MonoBehaviour:
   chaseSpeed: 5
   attackDistance: 1.5
   attackSpeed: 0
+  issdead: 0
   sound_attack1: {fileID: 1120442292}
-  sound_chase1: {fileID: 1007447941}
+  sound_chase1: {fileID: 0}
 --- !u!136 &572050412
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5910,6 +5912,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
   m_PrefabInstance: {fileID: 676786057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &684335982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684335983}
+  m_Layer: 0
+  m_Name: raycast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &684335983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684335982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0497, z: 0.1042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1665451502}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705057217
 GameObject:
   m_ObjectHideFlags: 0
@@ -14289,15 +14322,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 233.74
+      value: 177.51363
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 84.88
+      value: 72.48
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -699.63
+      value: -483.25
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15817,6 +15850,7 @@ GameObject:
   - component: {fileID: 1665451505}
   - component: {fileID: 1665451504}
   - component: {fileID: 1665451506}
+  - component: {fileID: 1665451507}
   m_Layer: 0
   m_Name: FNFiveSeven_Body
   m_TagString: Weapon
@@ -15931,6 +15965,7 @@ Transform:
   m_Children:
   - {fileID: 2121391674}
   - {fileID: 2142055450}
+  - {fileID: 684335983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1665451503
@@ -16164,6 +16199,31 @@ MonoBehaviour:
   m_FarAttachMode: 1
   left: {fileID: 2142055450}
   right: {fileID: 2121391674}
+--- !u!114 &1665451507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665451495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38a64fd617e7684f9399c6352c2ac2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastOrigin: {fileID: 684335983}
+  range: 100
+  damage: 25
+  fireRate: 0.2
+  maxAmmo: 12
+  reloadTime: 2
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  muzzleFlash: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 2a49375fc0ffd04438d3a70cfee20135, type: 3}
+  reloadSound: {fileID: 8300000, guid: fa7e64f22ce9639429898d957b7f487b, type: 3}
+  hitEffectPrefab: {fileID: 0}
 --- !u!1 &1681405347
 GameObject:
   m_ObjectHideFlags: 0
@@ -19867,7 +19927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9cc8c6fa4f8a749b46062fb85b1324, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 71.76579
+      value: 70.614
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9cc8c6fa4f8a749b46062fb85b1324, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19903,11 +19963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9cc8c6fa4f8a749b46062fb85b1324, type: 3}
       propertyPath: m_Name
-      value: Idle
+      value: zombi1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9cc8c6fa4f8a749b46062fb85b1324, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
