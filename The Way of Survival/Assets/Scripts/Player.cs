@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
     [SerializeField] Mission mission;
     float timer;
     public bool m = false;
+    [SerializeField] GameObject indic;
+    [SerializeField] GameObject achieve;
+    float achieveTimer = 0;
+    bool achievement = false;
     void Start()
     {
         h = health;
@@ -90,6 +94,23 @@ public class Player : MonoBehaviour
         {
             c = collec;
             collection.text = c.ToString() + "/10";
+            if (collec == 10)
+            {
+                indic.SetActive(false);
+                achieve.SetActive(true);
+                achievement = true;
+            }
+        }
+        if (achievement)
+        {
+            achieveTimer += Time.deltaTime;
+            if (achieveTimer >= 5)
+            {
+                achieve.SetActive(false);
+                indic.SetActive(true);
+                achieveTimer = 0;
+                achievement = false;
+            }
         }
         if (hunger == 0)
         {
