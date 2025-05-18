@@ -3,7 +3,7 @@ using TMPro;
 
 public class Damagedetector : MonoBehaviour
 {
-    Player player;
+    [SerializeField] Player player;
     public void ondamagedetected(int damage)
     {
         player.health -= damage;
