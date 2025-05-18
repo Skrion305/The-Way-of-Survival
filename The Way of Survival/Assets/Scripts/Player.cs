@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     int hunger = 100;
     int hr;
     [SerializeField] TMP_Text hungerLevel;
-    int food = 0;
+    public int food = 0;
     int f;
     [SerializeField] TMP_Text foodCount;
     int med = 0;
@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     [SerializeField] TMP_Text collection;
     [SerializeField] Mission mission;
     float timer;
+    public bool m = false;
     void Start()
     {
         h = health;
@@ -95,7 +96,7 @@ public class Player : MonoBehaviour
                 timer = 0;
             }
         }
-        else if (mission.resources >= 5)
+        else if (m)
         {
             timer += Time.deltaTime;
             if (timer >= 2)

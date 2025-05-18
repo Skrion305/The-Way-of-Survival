@@ -10,6 +10,10 @@ TagManager:
   - Enemy
   - Left
   - Right
+  - Food
+  - Medical chest
+  - Patrons
+  - Collection
   layers:
   - Default
   - TransparentFX

@@ -850,10 +850,13 @@ MonoBehaviour:
   health: 100
   healthLevel: {fileID: 1364647738}
   hungerLevel: {fileID: 560550258}
+  food: 0
   foodCount: {fileID: 1471409326}
   medChests: {fileID: 728048061}
   patronsCount: {fileID: 1552370396}
+  collection: {fileID: 1898531411}
   mission: {fileID: 781851890}
+  m: 0
 --- !u!4 &86266107 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -7722,7 +7725,7 @@ MonoBehaviour:
   resources: 0
   wall: {fileID: 33618390}
   panel: {fileID: 713666067}
-  indic: {fileID: 643233620}
+  player: {fileID: 86266106}
 --- !u!1001 &784408194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17165,10 +17168,10 @@ GameObject:
   - component: {fileID: 1665451500}
   - component: {fileID: 1665451498}
   - component: {fileID: 1665451496}
-  - component: {fileID: 1665451503}
   - component: {fileID: 1665451505}
   - component: {fileID: 1665451504}
   - component: {fileID: 1665451506}
+  - component: {fileID: 1665451507}
   m_Layer: 0
   m_Name: FNFiveSeven_Body
   m_TagString: Weapon
@@ -17285,20 +17288,6 @@ Transform:
   - {fileID: 2142055450}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1665451503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665451495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 289793c0f72757b4db4f2901ae514427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 1067653391}
-  indic: {fileID: 643233620}
 --- !u!65 &1665451504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17389,7 +17378,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1665451503}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: InHand
         m_Mode: 0
@@ -17416,7 +17405,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1665451503}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: NotInHand
         m_Mode: 0
@@ -17513,6 +17502,22 @@ MonoBehaviour:
   m_FarAttachMode: 1
   left: {fileID: 2142055450}
   right: {fileID: 2121391674}
+--- !u!114 &1665451507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665451495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289793c0f72757b4db4f2901ae514427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1067653391}
+  indic: {fileID: 643233620}
+  player: {fileID: 86266106}
+  mission: {fileID: 781851890}
 --- !u!1001 &1684726792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21024,6 +21029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: apple_001
       objectReference: {fileID: 0}
+    - target: {fileID: 6930279890566018556, guid: 86ad82f45da8e2341824acdfa0861d77, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 7739045061870497606, guid: 86ad82f45da8e2341824acdfa0861d77, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -21089,6 +21098,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6930279890566018556, guid: 86ad82f45da8e2341824acdfa0861d77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2054794165}
+    - targetCorrespondingSourceObject: {fileID: 6930279890566018556, guid: 86ad82f45da8e2341824acdfa0861d77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2054794170}
   m_SourcePrefab: {fileID: 100100000, guid: 86ad82f45da8e2341824acdfa0861d77, type: 3}
 --- !u!1 &2054794163 stripped
 GameObject:
@@ -21163,10 +21175,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054794170}
+        m_TargetAssemblyTypeName: Items, Assembly-CSharp
+        m_MethodName: InHand
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054794170}
+        m_TargetAssemblyTypeName: Items, Assembly-CSharp
+        m_MethodName: NotInHand
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -21262,11 +21298,27 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2054794170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054794163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289793c0f72757b4db4f2901ae514427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1067653391}
+  indic: {fileID: 643233620}
+  player: {fileID: 86266106}
+  mission: {fileID: 781851890}
 --- !u!1001 &2059325063
 PrefabInstance:
   m_ObjectHideFlags: 0
