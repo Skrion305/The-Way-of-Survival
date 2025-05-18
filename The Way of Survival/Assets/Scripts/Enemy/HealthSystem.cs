@@ -8,6 +8,8 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if (health <= 0) dead = true ;
+        if (health <= 0) { dead = true;
+            Debug.Log("kill");
+        } ;
     }
 }

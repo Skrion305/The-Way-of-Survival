@@ -71,37 +71,30 @@ public class VRGunRaycast : MonoBehaviour
         if (muzzleFlash != null) muzzleFlash.Play();
         if (shootSound != null) audioSource.PlayOneShot(shootSound);
 
-        // Raycast
+
+        
         if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out RaycastHit hit, range, hitLayers))
         {
-            // Обработка попадания
+            
             HandleHit(hit);
 
-            // Эффект попадания
+            
             if (hitEffectPrefab != null)
             {
                 Instantiate(hitEffectPrefab, hit.point, Quaternion.LookRotation(hit.normal));
             }
         }
 
-        // Визуализация луча (только в редакторе)
-        Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * range, Color.red, 0.1f);
+        
     }
 
     private void HandleHit(RaycastHit hit)
     {
-        // Пример: нанесение урона
+        // нанесение урона
         HealthSystem health = hit.collider.GetComponent<HealthSystem>();
         if (health != null)
         {
             health.TakeDamage(damage);
-        }
-
-        // Пример: взаимодействие с физикой
-        Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.AddForceAtPosition(raycastOrigin.forward * 10f, hit.point, ForceMode.Impulse);
         }
     }
 
@@ -116,7 +109,7 @@ public class VRGunRaycast : MonoBehaviour
         isReloading = false;
     }
 
-    // Для UI (можно подключить к VR-интерфейсу)
+    
     public string GetAmmoInfo()
     {
         return $"{currentAmmo}/{maxAmmo}";
