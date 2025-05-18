@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public int patrons = 0;
     int p;
     [SerializeField] TMP_Text patronsCount;
-    int collec = 0;
+    public int collec = 0;
     int c;
     [SerializeField] TMP_Text collection;
     [SerializeField] Mission mission;

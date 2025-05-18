@@ -83,6 +83,11 @@ public class Items : MonoBehaviour
                 args.manager.CancelInteractableSelection(args.interactableObject);
             }
         }
+        if (args.interactableObject.transform.CompareTag("Collection"))
+        {
+            Destroy(gameObject);
+            player.collec++;
+        }
     }
     public void NotInHand(SelectExitEventArgs args)
     {
