@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-[RequireComponent(typeof(XRGrabInteractable))]
-public class VRGunRaycast : MonoBehaviour
+[RequireComponent(typeof(LeftRight))]
+public class Fiveseven : MonoBehaviour
 {
     [Header("Gun Settings")]
     public Transform raycastOrigin;
@@ -21,14 +21,14 @@ public class VRGunRaycast : MonoBehaviour
     public GameObject hitEffectPrefab;
 
     private AudioSource audioSource;
-    private XRGrabInteractable grabInteractable;
+    private LeftRight grabInteractable;
     private float lastFireTime;
     private int currentAmmo;
     private bool isReloading = false;
 
     private void Awake()
     {
-        grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable = GetComponent<LeftRight>();
         audioSource = GetComponent<AudioSource>();
         currentAmmo = maxAmmo;
     }
@@ -62,7 +62,7 @@ public class VRGunRaycast : MonoBehaviour
                Time.time > lastFireTime + fireRate;
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         lastFireTime = Time.time;
         currentAmmo--;
