@@ -54,6 +54,35 @@ public class Items : MonoBehaviour
                 args.manager.CancelInteractableSelection(args.interactableObject);
             }
         }
+        if (args.interactableObject.transform.CompareTag("Medical chest"))
+        {
+            if (!player.m)
+            {
+                Destroy(gameObject);
+                mission.resources++;
+            }
+            else if (player.med < 3)
+            {
+                Destroy(gameObject);
+                player.med++;
+            }
+            else
+            {
+                args.manager.CancelInteractableSelection(args.interactableObject);
+            }
+        }
+        if (args.interactableObject.transform.CompareTag("Patrons"))
+        {
+            if (player.patrons < 50)
+            {
+                Destroy(gameObject);
+                player.patrons += 25;
+            }
+            else
+            {
+                args.manager.CancelInteractableSelection(args.interactableObject);
+            }
+        }
     }
     public void NotInHand(SelectExitEventArgs args)
     {

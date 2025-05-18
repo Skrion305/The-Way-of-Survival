@@ -12,10 +12,10 @@ public class Player : MonoBehaviour
     public int food = 0;
     int f;
     [SerializeField] TMP_Text foodCount;
-    int med = 0;
+    public int med = 0;
     int mc;
     [SerializeField] TMP_Text medChests;
-    int patrons = 0;
+    public int patrons = 0;
     int p;
     [SerializeField] TMP_Text patronsCount;
     int collec = 0;
@@ -79,6 +79,10 @@ public class Player : MonoBehaviour
         }
         if (patrons != p)
         {
+            if (patrons > 50)
+            {
+                patrons = 50;
+            }
             p = patrons;
             patronsCount.text = p.ToString() + "/50";
         }
