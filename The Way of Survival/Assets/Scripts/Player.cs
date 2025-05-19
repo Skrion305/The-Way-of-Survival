@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public int health = 100;
     int h;
     [SerializeField] TMP_Text healthLevel;
-    int hunger = 100;
+    public int hunger = 100;
     int hr;
     [SerializeField] TMP_Text hungerLevel;
     public int food = 0;
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject achieve;
     float achieveTimer = 0;
     bool achievement = false;
-    [SerializeField] HealthSystem hs;
+    public int kills = 0;
     void Start()
     {
         h = health;
@@ -138,10 +138,26 @@ public class Player : MonoBehaviour
                 timer = 0;
             }
         }
-        if ((hs.kills == 5) && (!GameData.achieve2))
+        if ((kills == 5) && (!GameData.achieve2))
         {
-            GameData.achieve2 = true;
+            indic.SetActive(false);
             achieve.SetActive(true);
+            achievement = true;
+            GameData.achieve2 = true;
+        }
+        if ((kills == 10) && (!GameData.achieve3))
+        {
+            indic.SetActive(false);
+            achieve.SetActive(true);
+            achievement = true;
+            GameData.achieve3 = true;
+        }
+        if ((kills == 15) && (!GameData.achieve4))
+        {
+            indic.SetActive(false);
+            achieve.SetActive(true);
+            achievement = true;
+            GameData.achieve4 = true;
         }
     }
 }

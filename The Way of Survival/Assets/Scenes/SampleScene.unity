@@ -849,6 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   healthLevel: {fileID: 1364647738}
+  hunger: 100
   hungerLevel: {fileID: 560550258}
   food: 0
   foodCount: {fileID: 1471409326}
@@ -862,6 +863,7 @@ MonoBehaviour:
   m: 0
   indic: {fileID: 643233620}
   achieve: {fileID: 1874307572}
+  kills: 0
 --- !u!4 &86266107 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -879,6 +881,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255e988fdf90f7a43bf6b90e8589ebe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 86266106}
+--- !u!114 &86266119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86266084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421461e70fd427740a80e2d49a9b5dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useFoodAction: {fileID: -3661077687844220493, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  useMedAction: {fileID: -7245821134105805312, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   player: {fileID: 86266106}
 --- !u!1001 &87521158
 PrefabInstance:
@@ -5528,6 +5545,7 @@ MonoBehaviour:
   health: 100
   dead: 0
   esm: {fileID: 572050411}
+  player: {fileID: 86266106}
 --- !u!1001 &573655388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17029,6 +17047,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 86266113}
+    - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 86266119}
     - targetCorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1115134459}
