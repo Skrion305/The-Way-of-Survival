@@ -15,6 +15,7 @@ public class Shoting : MonoBehaviour
     {
         muzzleFlash.Play();
         fire_source.Play();
+        Debug.Log("андрей лох");
         if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out RaycastHit hit, range))
         {
 
