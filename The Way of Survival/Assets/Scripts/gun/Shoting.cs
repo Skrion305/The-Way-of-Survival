@@ -9,21 +9,20 @@ public class Shoting : MonoBehaviour
     public int range = 100;
     public int damage = 25;
     public ParticleSystem muzzleFlash;
-
+    [SerializeField] Player player;
 
     public void Shoot()
     {
         muzzleFlash.Play();
         fire_source.Play();
-        Debug.Log("андрей лох");
-        if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out RaycastHit hit, range))
+        if (player.patrons > 0)
         {
-
-            HandleHit(hit);
-
-
+            if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out RaycastHit hit, range))
+            {
+                HandleHit(hit);
+            }
+            player.patrons--;
         }
-
     }
 
     private void HandleHit(RaycastHit hit)

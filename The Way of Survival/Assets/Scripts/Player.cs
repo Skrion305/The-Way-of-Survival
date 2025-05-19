@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject achieve;
     float achieveTimer = 0;
     bool achievement = false;
+    [SerializeField] HealthSystem hs;
     void Start()
     {
         h = health;
@@ -136,6 +137,11 @@ public class Player : MonoBehaviour
                 hunger--;
                 timer = 0;
             }
+        }
+        if ((hs.kills == 5) && (!GameData.achieve2))
+        {
+            GameData.achieve2 = true;
+            achieve.SetActive(true);
         }
     }
 }
