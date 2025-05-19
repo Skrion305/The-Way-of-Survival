@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -57,6 +58,11 @@ public class Player : MonoBehaviour
             }
             h = health;
             healthLevel.text = h.ToString();
+            if (health == 0)
+            {
+                GameData.losing = true;
+                SceneManager.LoadScene("Menu");
+            }
         }
         if (hunger != hr)
         {
