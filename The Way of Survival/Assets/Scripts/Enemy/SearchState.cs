@@ -36,5 +36,10 @@ public class SearchState : BaseState
             manager.SwitchState(manager.idle);
             return;
         }
+        if (manager.issdead == true)
+        {
+            manager.SwitchState(manager.dead);
+            return;
+        }
     }
 }

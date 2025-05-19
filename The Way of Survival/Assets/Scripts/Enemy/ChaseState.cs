@@ -22,5 +22,10 @@ public class ChaseState : BaseState
             manager.SwitchState(manager.attack);
             return;
         }
+        if (manager.issdead == true)
+        {
+            manager.SwitchState(manager.dead);
+            return;
+        }
     }
 }

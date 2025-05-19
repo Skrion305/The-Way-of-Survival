@@ -12,6 +12,11 @@ public class AttackState : BaseState
     {
         manager.sound_attack1.Play();
         manager.transform.LookAt(manager.player);
+        if (manager.issdead == true)
+        {
+            manager.SwitchState(manager.dead);
+            return;
+        }
     }
     /*    if (manager.Distance(manager.player) >= manager.attackDistance)
     //    {
