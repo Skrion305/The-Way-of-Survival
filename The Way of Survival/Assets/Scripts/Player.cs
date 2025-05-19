@@ -94,11 +94,12 @@ public class Player : MonoBehaviour
         {
             c = collec;
             collection.text = c.ToString() + "/10";
-            if (collec == 10)
+            if ((collec == 10) && (!GameData.achieve1))
             {
                 indic.SetActive(false);
                 achieve.SetActive(true);
                 achievement = true;
+                GameData.achieve1 = true;
             }
         }
         if (achievement)
