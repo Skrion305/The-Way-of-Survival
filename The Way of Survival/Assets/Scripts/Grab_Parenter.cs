@@ -5,6 +5,13 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class Grab_Parenter : MonoBehaviour
 {
+    void Update()
+    {
+        if ((GameData.victory) || (GameData.losing))
+        {
+            Destroy(gameObject);
+        }
+    }
     public void OnGrab(SelectEnterEventArgs args)
     {
         args.interactableObject.transform.SetParent(args.interactorObject.transform);

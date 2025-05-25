@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class Shoting : MonoBehaviour
+public class Shooting : MonoBehaviour
 {
     public AudioClip fireclip;
     public AudioSource fire_source;
@@ -13,10 +13,10 @@ public class Shoting : MonoBehaviour
 
     public void Shoot()
     {
-        muzzleFlash.Play();
-        fire_source.Play();
         if (player.patrons > 0)
         {
+            muzzleFlash.Play();
+            fire_source.Play();
             if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out RaycastHit hit, range))
             {
                 HandleHit(hit);
