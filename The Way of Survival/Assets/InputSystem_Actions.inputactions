@@ -990,6 +990,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "VR",
+            "id": "85f41d3c-cae2-42cd-80b0-904598e69ab3",
+            "actions": [
+                {
+                    "name": "UseFood",
+                    "type": "Button",
+                    "id": "a3209841-3c98-483c-8df8-4070e1a01e82",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseMed",
+                    "type": "Button",
+                    "id": "57a81a8c-51a4-4a96-afe7-6be97dd2a9ed",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "795b509f-504b-4920-8ba4-63e9956f4af0",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseFood",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "153a3477-5a6c-4c76-bd01-80f37aa9a5da",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseMed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

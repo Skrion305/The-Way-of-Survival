@@ -21,10 +21,11 @@ public class EnemyStateManager : MonoBehaviour
     public float attackSpeed;
     BaseState state;
     public IdleState idle = new IdleState();
+    public DeadState dead = new DeadState();
     public SearchState search = new SearchState();
     public ChaseState chase = new ChaseState();
     public AttackState attack = new AttackState();
-
+    public bool issdead;
     [SerializeField] public AudioSource sound_attack1, sound_chase1;
     void Start()
     {

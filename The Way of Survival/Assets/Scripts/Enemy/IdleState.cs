@@ -22,5 +22,10 @@ public class IdleState : BaseState
             manager.SwitchState(manager.chase);
             return;
         }
+        if (manager.issdead == true)
+        {
+            manager.SwitchState(manager.dead);
+            return;
+        }
     }
 }
