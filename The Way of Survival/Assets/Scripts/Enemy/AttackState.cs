@@ -7,6 +7,7 @@ public class AttackState : BaseState
         manager.SetSpeed(manager.attackSpeed);
         manager.animator.SetBool("isattack", true);
         manager.animator.SetBool("isagro", false);
+        manager.sound_attack1.Play();
     }
     public override void UpdateState(EnemyStateManager manager)
     {
