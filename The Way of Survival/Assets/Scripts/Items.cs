@@ -3,9 +3,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Items : MonoBehaviour
 {
-    [SerializeField] GameObject panel;
+    [SerializeField] GameObject panel1;
+    [SerializeField] GameObject panel2;
+    [SerializeField] GameObject panel3;
     [SerializeField] GameObject indic;
-    bool ui = false;
+    bool ui1 = false;
+    bool ui2 = false;
+    bool ui3 = false;
     float timer;
     bool inHand = false;
     [SerializeField] Player player;
@@ -17,7 +21,9 @@ public class Items : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 5)
             {
-                panel.SetActive(false);
+                panel1.SetActive(false);
+                panel2.SetActive(false);
+                panel3.SetActive(false);
                 indic.SetActive(true);
                 inHand = false;
                 timer = 0;
@@ -30,10 +36,24 @@ public class Items : MonoBehaviour
         {
             player.health = 0;
         }
-        if ((!ui) && (args.interactableObject.transform.CompareTag("Weapon")))
+        if ((!ui1) && (args.interactableObject.transform.CompareTag("Gun")))
         {
-            panel.SetActive(true);
-            ui = true;
+            panel1.SetActive(true);
+            ui1 = true;
+            indic.SetActive(false);
+            inHand = true;
+        }
+        if ((!ui2) && (args.interactableObject.transform.CompareTag("Axe")))
+        {
+            panel2.SetActive(true);
+            ui2 = true;
+            indic.SetActive(false);
+            inHand = true;
+        }
+        if ((!ui3) && (args.interactableObject.transform.CompareTag("Knife")))
+        {
+            panel3.SetActive(true);
+            ui3 = true;
             indic.SetActive(false);
             inHand = true;
         }
@@ -91,7 +111,9 @@ public class Items : MonoBehaviour
     }
     public void NotInHand(SelectExitEventArgs args)
     {
-        panel.SetActive(false);
+        panel1.SetActive(false);
+        panel2.SetActive(false);
+        panel3.SetActive(false);
         indic.SetActive(true);
         inHand = false;
         timer = 0;

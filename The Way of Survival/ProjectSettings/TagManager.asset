@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Wall
-  - Weapon
   - Infected
   - Enemy
   - Left
@@ -14,6 +13,9 @@ TagManager:
   - Medical chest
   - Patrons
   - Collection
+  - Axe
+  - Knife
+  - Gun
   layers:
   - Default
   - TransparentFX

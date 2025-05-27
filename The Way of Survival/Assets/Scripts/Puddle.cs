@@ -1,10 +1,13 @@
 using UnityEngine;
+using static UnityEngine.Rendering.GPUSort;
 
 public class Puddle : MonoBehaviour
 {
-    void OnCollisionEnter(Collision col)
+    bool weapon = false;
+    void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Weapon"))
+        weapon = (col.CompareTag("Gun")) || (col.CompareTag("Axe")) || (col.CompareTag("Knife"));
+        if (weapon)
         {
             col.gameObject.tag = "Infected";
         }
