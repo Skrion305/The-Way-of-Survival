@@ -23889,6 +23889,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.857
       objectReference: {fileID: 0}
+    - target: {fileID: -8271834556889637560, guid: 6d47d0e2f1e8e3c49bf19f99d3c140c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a4f363d2a54921345b4d0e00db32b9db, type: 2}
+    - target: {fileID: -677534472348405132, guid: 6d47d0e2f1e8e3c49bf19f99d3c140c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a4f363d2a54921345b4d0e00db32b9db, type: 2}
     - target: {fileID: 132372253720954067, guid: 6d47d0e2f1e8e3c49bf19f99d3c140c9, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -23905,10 +23913,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 305042322012523849, guid: 6d47d0e2f1e8e3c49bf19f99d3c140c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a4f363d2a54921345b4d0e00db32b9db, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d47d0e2f1e8e3c49bf19f99d3c140c9, type: 3}
       propertyPath: m_Name
       value: Playground
       objectReference: {fileID: 0}
+    - target: {fileID: 1358831838296274433, guid: 6d47d0e2f1e8e3c49bf19f99d3c140c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a4f363d2a54921345b4d0e00db32b9db, type: 2}
+    - target: {fileID: 2630596814797373727, guid: 6d47d0e2f1e8e3c49bf19f99d3c140c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a4f363d2a54921345b4d0e00db32b9db, type: 2}
     - target: {fileID: 4416035361080874714, guid: 6d47d0e2f1e8e3c49bf19f99d3c140c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.023
@@ -23941,6 +23961,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8524823538139195233, guid: 6d47d0e2f1e8e3c49bf19f99d3c140c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a4f363d2a54921345b4d0e00db32b9db, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
