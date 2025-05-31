@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         mc = med;
         medChests.text = mc.ToString() + "/3";
         p = patrons;
-        patronsCount.text = p.ToString() + "/50";
+        patronsCount.text = p.ToString() + "/90";
         c = collec;
         collection.text = c.ToString() + "/10";
     }
@@ -90,12 +90,12 @@ public class Player : MonoBehaviour
         }
         if (patrons != p)
         {
-            if (patrons > 100)
+            if (patrons > 90)
             {
-                patrons = 100;
+                patrons = 90;
             }
             p = patrons;
-            patronsCount.text = p.ToString() + "/100";
+            patronsCount.text = p.ToString() + "/90";
         }
         if (collec != c)
         {

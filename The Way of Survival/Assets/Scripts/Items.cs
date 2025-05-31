@@ -6,10 +6,12 @@ public class Items : MonoBehaviour
     [SerializeField] GameObject panel1;
     [SerializeField] GameObject panel2;
     [SerializeField] GameObject panel3;
+    [SerializeField] GameObject panel4;
     [SerializeField] GameObject indic;
     bool ui1 = false;
     bool ui2 = false;
     bool ui3 = false;
+    bool ui4 = false;
     float timer;
     bool inHand = false;
     [SerializeField] Player player;
@@ -57,6 +59,13 @@ public class Items : MonoBehaviour
             indic.SetActive(false);
             inHand = true;
         }
+        if ((!ui4) && (args.interactableObject.transform.CompareTag("Revolver")))
+        {
+            panel4.SetActive(true);
+            ui4 = true;
+            indic.SetActive(false);
+            inHand = true;
+        }
         if (args.interactableObject.transform.CompareTag("Food"))
         {
             if (!player.m)
@@ -93,10 +102,10 @@ public class Items : MonoBehaviour
         }
         if (args.interactableObject.transform.CompareTag("Patrons"))
         {
-            if (player.patrons < 50)
+            if (player.patrons < 90)
             {
                 Destroy(gameObject);
-                player.patrons += 50;
+                player.patrons += 45;
             }
             else
             {

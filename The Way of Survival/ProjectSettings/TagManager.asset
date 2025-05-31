@@ -16,6 +16,7 @@ TagManager:
   - Axe
   - Knife
   - Gun
+  - Revolver
   layers:
   - Default
   - TransparentFX
