@@ -96,7 +96,7 @@ public class Items : MonoBehaviour
             if (player.patrons < 50)
             {
                 Destroy(gameObject);
-                player.patrons += 25;
+                player.patrons += 50;
             }
             else
             {

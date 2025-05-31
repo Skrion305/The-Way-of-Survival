@@ -90,12 +90,12 @@ public class Player : MonoBehaviour
         }
         if (patrons != p)
         {
-            if (patrons > 50)
+            if (patrons > 100)
             {
-                patrons = 50;
+                patrons = 100;
             }
             p = patrons;
-            patronsCount.text = p.ToString() + "/50";
+            patronsCount.text = p.ToString() + "/100";
         }
         if (collec != c)
         {

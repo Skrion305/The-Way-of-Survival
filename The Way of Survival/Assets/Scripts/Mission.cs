@@ -11,11 +11,11 @@ public class Mission : MonoBehaviour
     [SerializeField] Player player;
     void Start()
     {
-        text.text = "Собрано ресурсов: " + resources.ToString() + "/5";
+        text.text = "Собрано ресурсов: " + resources.ToString() + "/3";
     }
     void Update()
     {
-        if (resources == 5)
+        if (resources == 3)
         {
             panel.SetActive(false);
             Destroy(wall);
@@ -23,7 +23,7 @@ public class Mission : MonoBehaviour
         }
         else if (resources > res)
         {
-            text.text = "Собрано ресурсов: " + resources.ToString() + "/5";
+            text.text = "Собрано ресурсов: " + resources.ToString() + "/3";
             res = resources;
         }
     }
@@ -38,7 +38,7 @@ public class Mission : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            text.text = "Собрано ресурсов: " + resources.ToString() + "/5";
+            text.text = "Собрано ресурсов: " + resources.ToString() + "/3";
         }
     }
 }
