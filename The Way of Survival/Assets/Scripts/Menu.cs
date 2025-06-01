@@ -113,7 +113,6 @@ public class Menu : MonoBehaviour
     }
     public void ExitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
     public void Achievements()
