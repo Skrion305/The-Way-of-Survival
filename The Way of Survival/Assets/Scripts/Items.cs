@@ -26,6 +26,7 @@ public class Items : MonoBehaviour
                 panel1.SetActive(false);
                 panel2.SetActive(false);
                 panel3.SetActive(false);
+                panel4.SetActive(false);
                 indic.SetActive(true);
                 inHand = false;
                 timer = 0;

@@ -7,7 +7,7 @@ public class Puddle : MonoBehaviour
     [SerializeField] Player player;
     void OnTriggerEnter(Collider col)
     {
-        weapon = (col.CompareTag("Gun")) || (col.CompareTag("Axe")) || (col.CompareTag("Knife"));
+        weapon = (col.CompareTag("Gun")) || (col.CompareTag("Axe")) || (col.CompareTag("Knife")) || (col.CompareTag("Revolver"));
         if (weapon)
         {
             col.gameObject.tag = "Infected";

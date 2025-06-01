@@ -17,6 +17,8 @@ public class Menu : MonoBehaviour
     [SerializeField] TMP_Text achievement4;
     [SerializeField] GameObject victory;
     [SerializeField] GameObject losing;
+    [SerializeField] AudioSource victoryMusic;
+    [SerializeField] AudioSource losingMusic;
     void Start()
     {
         AudioListener.volume = GameData.volumeLevel;
@@ -24,11 +26,15 @@ public class Menu : MonoBehaviour
         if (GameData.music)
         {
             audioSource.volume = 1f;
+            victoryMusic.volume = 1f;
+            losingMusic.volume = 1f;
             text.text = "Выключить";
         }
         else
         {
             audioSource.volume = 0f;
+            victoryMusic.volume = 0f;
+            losingMusic.volume = 0f;
             text.text = "Включить";
         }
         if (GameData.achieve1)
@@ -51,12 +57,20 @@ public class Menu : MonoBehaviour
         {
             mainMenu.SetActive(false);
             victory.SetActive(true);
+            if (GameData.music)
+            {
+                PlayVictoryMusic();
+            }
             GameData.victory = false;
         }
         if (GameData.losing)
         {
             mainMenu.SetActive(false);
             losing.SetActive(true);
+            if (GameData.music)
+            {
+                PlayLosingMusic();
+            }
             GameData.losing = false;
         }
     }
@@ -108,5 +122,23 @@ public class Menu : MonoBehaviour
         victory.SetActive(false);
         losing.SetActive(false);
         achievements.SetActive(true);
+    }
+    void PlayBackgroundMusic()
+    {
+        victoryMusic.Stop();
+        losingMusic.Stop();
+        audioSource.Play();
+    }
+    void PlayVictoryMusic()
+    {
+        audioSource.Stop();
+        victoryMusic.Play();
+        Invoke(nameof(PlayBackgroundMusic), victoryMusic.clip.length);
+    }
+    void PlayLosingMusic()
+    {
+        audioSource.Stop();
+        losingMusic.Play();
+        Invoke(nameof(PlayBackgroundMusic), losingMusic.clip.length);
     }
 }
